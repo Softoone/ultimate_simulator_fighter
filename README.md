@@ -1,6 +1,6 @@
 # Ultimate Simulator Fighter
 
-Código feito enquanto aprendi alguns conceitos de POO.
+Código feito enquanto aprendia alguns conceitos de POO.
 
 Na temática do UFC, criamos um evento no método principal definindo local e quantidade de lutas a serem realizadas.
 A partir disto, automaticamente o programa define de forma randômica os confrontos e os simula de acordo com as regras implementadas.
