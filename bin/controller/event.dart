@@ -11,7 +11,13 @@ class Event {
   int numberOfFights;
 
   Event(this.locale, this.numberOfFights) {
-    _create();
+    if (numberOfFights <= 5) {
+      _create();
+    } else {
+      print(
+          'Número de lutas excede o limite permitido (Máximo de 7 lutas por evento)');
+      numberOfFights = 0;
+    }
   }
 
   _create() {
@@ -35,6 +41,7 @@ class Event {
       fights[i].toFight();
 
       if (i < fights.length - 1) {
+        waitFor(Helper.introducingTimeStamp);
         print('');
         print('5 seconds till the next fight');
         print('');
@@ -52,6 +59,10 @@ class Event {
       case 1:
         f1 = fighters.flyWeight[selector.nextInt(fighters.flyWeight.length)];
         f2 = fighters.flyWeight[selector.nextInt(fighters.flyWeight.length)];
+        while (f1.isChampion!) {
+          f1 = fighters.flyWeight[selector.nextInt(fighters.flyWeight.length)];
+        }
+
         while (f1.name == f2.name) {
           f2 = fighters.flyWeight[selector.nextInt(fighters.flyWeight.length)];
         }
@@ -64,11 +75,15 @@ class Event {
             .bantamWeight[selector.nextInt(fighters.bantamWeight.length)];
         f2 = fighters
             .bantamWeight[selector.nextInt(fighters.bantamWeight.length)];
+        while (f1.isChampion!) {
+          f1 = fighters
+              .bantamWeight[selector.nextInt(fighters.bantamWeight.length)];
+        }
+
         while (f1.name == f2.name) {
           f2 = fighters
               .bantamWeight[selector.nextInt(fighters.bantamWeight.length)];
         }
-
         fights.add(Fight(f1, f2));
         return;
 
@@ -77,6 +92,11 @@ class Event {
             .welterWeight[selector.nextInt(fighters.welterWeight.length)];
         f2 = fighters
             .welterWeight[selector.nextInt(fighters.welterWeight.length)];
+        while (f1.isChampion!) {
+          f1 = fighters
+              .welterWeight[selector.nextInt(fighters.welterWeight.length)];
+        }
+
         while (f1.name == f2.name) {
           f2 = fighters
               .welterWeight[selector.nextInt(fighters.welterWeight.length)];
@@ -89,6 +109,11 @@ class Event {
             .middleWeight[selector.nextInt(fighters.middleWeight.length)];
         f2 = fighters
             .middleWeight[selector.nextInt(fighters.middleWeight.length)];
+        while (f1.isChampion!) {
+          f1 = fighters
+              .middleWeight[selector.nextInt(fighters.middleWeight.length)];
+        }
+
         while (f1.name == f2.name) {
           f2 = fighters
               .middleWeight[selector.nextInt(fighters.middleWeight.length)];
@@ -101,6 +126,11 @@ class Event {
             selector.nextInt(fighters.lightHeavyWeight.length)];
         f2 = fighters.lightHeavyWeight[
             selector.nextInt(fighters.lightHeavyWeight.length)];
+        while (f1.isChampion!) {
+          f1 = fighters.lightHeavyWeight[
+              selector.nextInt(fighters.lightHeavyWeight.length)];
+        }
+
         while (f1.name == f2.name) {
           f2 = fighters.lightHeavyWeight[
               selector.nextInt(fighters.lightHeavyWeight.length)];
@@ -113,6 +143,11 @@ class Event {
             fighters.heavyWeight[selector.nextInt(fighters.heavyWeight.length)];
         f2 =
             fighters.heavyWeight[selector.nextInt(fighters.heavyWeight.length)];
+        while (f1.isChampion!) {
+          f1 = fighters
+              .heavyWeight[selector.nextInt(fighters.heavyWeight.length)];
+        }
+
         while (f1.name == f2.name) {
           f2 = fighters
               .heavyWeight[selector.nextInt(fighters.heavyWeight.length)];
@@ -125,6 +160,11 @@ class Event {
             fighters.lightWeight[selector.nextInt(fighters.lightWeight.length)];
         f2 =
             fighters.lightWeight[selector.nextInt(fighters.lightWeight.length)];
+        while (f1.isChampion!) {
+          f1 = fighters
+              .lightWeight[selector.nextInt(fighters.lightWeight.length)];
+        }
+
         while (f1.name == f2.name) {
           f2 = fighters
               .lightWeight[selector.nextInt(fighters.lightWeight.length)];

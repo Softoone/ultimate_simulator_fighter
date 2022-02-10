@@ -30,6 +30,7 @@ class Fight {
     if (isAproved) {
       waitFor(Helper.presentationTimeStamp);
       print('Throughout in the UFS ${_host.division} division');
+      waitFor(Helper.presentationTimeStamp);
       _challenger.introduce('blue');
       _host.introduce('red');
       _simulateFight();
@@ -67,6 +68,7 @@ class Fight {
 
         waitFor(Helper.roundTimeStamp);
         print('========== END OF ROUND $i ================');
+        print('');
 
         if (i < _rounds) {
           winTkoSubm = _winByKoSubmission(winMargin, winChallenger, winHost);
@@ -112,7 +114,10 @@ class Fight {
   bool _winByKoSubmission(int winMargin, int winChallenger, int winHost) {
     if (winChallenger == winMargin) {
       print('');
-      print('And the winner by TKO/Submission is...');
+      print('And the winner by TKO/Submission...'.toUpperCase());
+      if (_host.isChampion!) {
+        print('The new undisputed ${_challenger.division} champion of the world'.toUpperCase());
+      }
       waitFor(Helper.presentationTimeStamp);
       print(_challenger.fullName);
       print('');
@@ -121,7 +126,10 @@ class Fight {
 
     if (winHost == winMargin) {
       print('');
-      print('And the winner by TKO/Submission is...');
+      print('The winner by TKO/Submission...'.toUpperCase());
+      if (_host.isChampion!) {
+        print('and remains the undisputed ${_host.division} champion of the world'.toUpperCase());
+      }
       waitFor(Helper.presentationTimeStamp);
       print(_host.fullName);
       print('');
