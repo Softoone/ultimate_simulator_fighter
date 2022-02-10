@@ -9,4 +9,3 @@ Há também vantagens para o competidor que já é campeão da categoria, tornan
 Durante a simulação é realizado um lógica para atribuir uma vitória por Nocaute/Submissão.
 
 É uma atividade bem simples, mas foi divertido codar esse mini-universo de lutas, e sentindo as diferenças entre as liguagens que eu utilizo.
-Dessa vez em Java, mas quem sabe isso não evolui pra uma coisa legal em Dart.
