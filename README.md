@@ -13,3 +13,8 @@ Há também vantagens para o competidor que já é campeão da categoria, tornan
 Durante a simulação é realizado um lógica para atribuir uma vitória por Nocaute/Submissão.
 
 #### É uma atividade bem simples, mas foi divertido codar esse mini-universo de lutas, e sentindo as diferenças entre as liguagens que eu utilizo.
+
+
+*Pequeno trecho de uma das simulações no link abaixo:*
+
+[Ultimate Fighter Simulator](https://drive.google.com/file/d/1qP0ntAPArYMJ8iJmMV8RRBilOX5VsFza/view?usp=sharing)
